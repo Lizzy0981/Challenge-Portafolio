@@ -27,4 +27,8 @@ const App: FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default App;
+=======
+export default App;
+>>>>>>> 235c25cbf8e633a36f3a91748dbe6580f1c216c5

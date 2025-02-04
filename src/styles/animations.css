@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* animations.css */
 
 /* Animaciones para Skills y Hobbies */
@@ -88,4 +89,96 @@
 .hero__text__list__item__link:hover {
   transform: translateY(-5px) scale(1.2);
   color: var(--color-background-btn-primary);
+=======
+/* animations.css */
+
+/* Animaciones para Skills y Hobbies */
+.skill,
+.hobbie {
+  transition: all 0.3s ease-in-out;
+}
+
+.skill:hover,
+.hobbie:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Animaciones para los botones */
+.btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: all 0.5s;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Animaciones para proyectos */
+.portfolio__project__img {
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.portfolio__project__img img {
+  transition: transform 0.5s ease;
+}
+
+.portfolio__project__img:hover img {
+  transform: scale(1.1);
+}
+
+/* Animaciones para cards de formación */
+.formacion__card {
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.formacion__card:hover {
+  transform: translateY(-10px) rotateY(5deg);
+  box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Animación del hero */
+.hero__img__profile {
+  transition: all 0.5s ease;
+}
+
+.hero__img__profile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 0, 255, 0.5); /* Mantiene el efecto neón */
+}
+
+/* Animaciones para iconos sociales */
+.hero__text__list__item__link {
+  transition: all 0.3s ease;
+}
+
+.hero__text__list__item__link:hover {
+  transform: translateY(-5px) scale(1.2);
+  color: var(--color-background-btn-primary);
+>>>>>>> 235c25cbf8e633a36f3a91748dbe6580f1c216c5
 }
