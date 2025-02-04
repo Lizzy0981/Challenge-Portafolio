@@ -1,0 +1,138 @@
+/* src/components/About/About.css */
+.sobre-mi {
+  padding: 4rem;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+
+.sobre-mi__title {
+  font-weight: 700;
+  font-size: 1.9rem;
+  padding-bottom: 1rem;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  background: linear-gradient(45deg, #fff, #b3b3b3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sobre-mi__title:hover {
+  transform: translateY(-3px);
+  text-shadow: 2px 2px 8px rgba(255, 0, 222, 0.5);
+}
+
+.sobre-mi__title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #ff00de, transparent);
+  transition: width 0.5s ease;
+}
+
+.sobre-mi__title:hover::after {
+  width: 100%;
+}
+
+.sobre-mi__text {
+  font-weight: 400;
+  text-align: justify;
+  color: #b3b3b3;
+  line-height: 1.525rem;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  transform-origin: center;
+}
+
+.sobre-mi__text:hover {
+  color: #ffffff;
+  transform: scale(1.01);
+  box-shadow: 0 10px 30px rgba(255, 0, 222, 0.1);
+}
+
+.sobre-mi__text a {
+  color: #4a90e2;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0 5px;
+}
+
+.sobre-mi__text a::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #4a90e2;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.sobre-mi__text a:hover {
+  color: #ff00de;
+  text-shadow: 0 0 8px rgba(255, 0, 222, 0.5);
+}
+
+.sobre-mi__text a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Animación para la entrada de la sección */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sobre-mi {
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Media queries */
+@media screen and (min-width: 768px) {
+  .sobre-mi__text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    padding: 2.5rem;
+  }
+
+  .sobre-mi__title {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .sobre-mi {
+    padding: 6rem;
+  }
+
+  .sobre-mi__text {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .sobre-mi__title {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+}

@@ -1,0 +1,213 @@
+/* src/components/Formation/Formation.css */
+.formaciones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+
+.formaciones__title {
+  padding-bottom: 2rem;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, #fff, #b3b3b3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.formaciones__title:hover {
+  transform: translateY(-3px);
+  text-shadow: 2px 2px 8px rgba(255, 0, 222, 0.5);
+}
+
+.formacion__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  width: 90%;
+  max-width: 1200px;
+  position: relative;
+  z-index: 1;
+  padding: 0 1rem;
+}
+
+.formacion__card {
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  height: auto;
+  max-height: 300px;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+  position: relative;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.formacion__card:hover {
+  transform: translateY(-10px) rotateY(10deg) scale(1.02);
+  box-shadow: 0 20px 40px rgba(255, 0, 222, 0.2),
+              0 0 20px rgba(253, 197, 123, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+  animation: none;
+}
+
+.formacion__card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(253, 197, 123, 0.2),
+    rgba(255, 0, 222, 0.2),
+    transparent
+  );
+  transform: rotate(45deg);
+  transition: transform 0.6s ease;
+}
+
+.formacion__card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    225deg,
+    transparent 40%,
+    rgba(253, 197, 123, 0.1) 45%,
+    rgba(255, 0, 222, 0.1) 50%,
+    transparent 55%
+  );
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) translateY(-100%);
+  }
+  50% {
+    transform: translateX(100%) translateY(100%);
+  }
+  100% {
+    transform: translateX(-100%) translateY(-100%);
+  }
+}
+
+.formacion__card:hover::before {
+  transform: rotate(45deg) translate(50%, 50%);
+}
+
+.formacion__img {
+  height: 150px;
+  width: 100%;
+  object-fit: contain;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 0.5rem;
+  transition: all 0.5s ease;
+}
+
+.formacion__card:hover .formacion__img {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+.formacion__title {
+  color: #ffffff;
+  font-weight: 700;
+  padding: 1rem 0 0.5rem;
+  font-size: 1.1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.formacion__title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff00de, transparent);
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.formacion__card:hover .formacion__title {
+  color: #ff00de;
+  text-shadow: 0 0 10px rgba(255, 0, 222, 0.5);
+}
+
+.formacion__card:hover .formacion__title::after {
+  width: 80%;
+}
+
+.formacion__text {
+  font-weight: 500;
+  padding: 0.5rem 0;
+  color: #b3b3b3;
+  font-size: 0.9rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.formacion__card:hover .formacion__text {
+  color: #ffffff;
+}
+
+/* Media queries */
+@media screen and (min-width: 768px) {
+  .formacion__cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .formacion__card {
+    padding: 2rem;
+  }
+
+  .formacion__img {
+    height: 180px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .formacion__cards {
+    grid-template-columns: repeat(4, 1fr);
+    width: 85%;
+    padding-top: 2rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .formacion__cards {
+    width: 75%;
+    max-width: 1400px;
+  }
+}
