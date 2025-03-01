@@ -4,7 +4,8 @@ Portfolio personal desarrollado con React y TypeScript, presentando mi trabajo, 
 
 ## 📱 Imágenes de la Aplicación 📱
 
-![Portfolio Personal - Elizabeth Diaz Familia]
+![Portfolio Personal - Elizabeth Diaz Familia]![screencapture-challenge-portafol](https://github.com/user-attachments/assets/af9ee922-ba99-494c-9fee-75d61713b566)
+
 
 *Imagen de captura de pantalla de la aplicación desplegada.*
 
