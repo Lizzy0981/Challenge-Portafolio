@@ -2,6 +2,12 @@
 
 Portfolio personal desarrollado con React y TypeScript, presentando mi trabajo, habilidades y formación profesional.
 
+## 📱 Imágenes de la Aplicación 📱
+
+![Portfolio Personal - Elizabeth Diaz Familia]
+
+*Imagen de captura de pantalla de la aplicación desplegada.*
+
 ## 🚀 Características
 
 - Diseño responsivo con enfoque Mobile First
